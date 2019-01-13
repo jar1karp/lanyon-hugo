@@ -4,6 +4,8 @@
   <h1 class="post-title">{{ .Title }}</h1>
   <span class="post-date">{{ .Site.Params.DateForm | default "Jan 2, 2006" | .Date.Format }}</span>
   {{ .Content }}
+  {{ template "_internal/disqus.html" . }}
 </div>
 
 {{ partial "default_foot.html" . }}
+{{ template "_internal/google_analytics.html" . }}
